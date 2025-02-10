@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">authgear-ionic-example</string>
+    <string name="title_activity_main">authgear-ionic-example</string>
+    <string name="package_name">com.authgear.example.capacitor</string>
+    <string name="custom_url_scheme">com.authgear.example.capacitor</string>
+</resources>
