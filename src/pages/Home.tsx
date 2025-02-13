@@ -50,6 +50,22 @@ function AuthenticationScreen() {
     return d;
   }, [setSessionState]);
 
+  useEffect(() => {
+    if (isPlatformWeb()) {
+      authgearWeb.delegate = delegate;
+    } else {
+      authgearCapacitor.delegate = delegate;
+    }
+
+    return () => {
+      if (isPlatformWeb()) {
+        authgearWeb.delegate = undefined;
+      } else {
+        authgearCapacitor.delegate = undefined;
+      }
+    };
+  }, [delegate]);
+
   const configure = useCallback(async () => {
     try {
       if (isPlatformWeb()) {
@@ -67,6 +83,7 @@ function AuthenticationScreen() {
       }
       await postConfigure();
     } catch (e) {
+      setSessionState(SessionState.Unknown); //prevent use of old session state when a configuration error occurs. 
       console.error("Authgear Configuration error:", e);
     } 
   }, [CLIENT_ID, ENDPOINT]);
@@ -85,22 +102,6 @@ function AuthenticationScreen() {
       }
     }
   }, []);
-
-  useEffect(() => {
-    if (isPlatformWeb()) {
-      authgearWeb.delegate = delegate;
-    } else {
-      authgearCapacitor.delegate = delegate;
-    }
-
-    return () => {
-      if (isPlatformWeb()) {
-        authgearWeb.delegate = undefined;
-      } else {
-        authgearCapacitor.delegate = undefined;
-      }
-    };
-  }, [delegate]);
 
   useEffect(() => {
     configure();
@@ -150,7 +151,11 @@ function AuthenticationScreen() {
 
   const openUserSettings = useCallback(async () => {
     try {
-      authgearCapacitor.open(Page.Settings);
+      if (isPlatformWeb()) {
+        authgearWeb.open(Page.Settings);
+      } else {
+        authgearCapacitor.open(Page.Settings);
+      }
     } catch (e) {
       console.error("Error:", e)
     } 
@@ -219,7 +224,6 @@ function AuthenticationScreen() {
 
             <IonButton
               className="button"
-              disabled={isPlatformWeb()}
               onClick={onClickUserSettings}
             >
               User Settings
