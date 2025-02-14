@@ -23,6 +23,29 @@ Add the following URIs to your Authgear client application's Authorized Redirect
 - `http://localhost:8100/oauth-redirect`
 - `https://localhost`
 
+To test the app on the web, run the following command:
+```
+ionic serve
+```
+To build and run your application on mobile, use the following commands:
+Build your code:
+
+```
+npm run build
+```
+Sync changes to mobile platforms
+```
+npx cap sync
+```
+Open project on Android:
+```
+npx cap open android
+```
+Or open project on iOS:
+```
+npx cap open ios
+```
+Run your project from Android Studio or Xcode.
 
 ## What is Authgear?
 
