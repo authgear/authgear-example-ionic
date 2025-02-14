@@ -1,0 +1,7 @@
+{
+  "name": "authgear-ionic-example",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
