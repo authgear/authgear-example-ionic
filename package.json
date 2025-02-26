@@ -12,8 +12,8 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@authgear/capacitor": "^2.14.0",
-    "@authgear/web": "^2.14.0",
+    "@authgear/capacitor": "^2.15.0",
+    "@authgear/web": "^2.15.0",
     "@capacitor/android": "^7.0.1",
     "@capacitor/app": "7.0.0",
     "@capacitor/core": "7.0.1",
