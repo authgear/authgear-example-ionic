@@ -14,7 +14,7 @@ npm install
 
 The project needs to be configured with your Authgear app's Endpoint and client ID in order for the authentication flow to work.
 
-To do this, in `Home.tsx` and `OAuthRedirect.tsx`, replace `"<ClIENT_ID>"`, `"<AUTHGEAR_ENDPOINT>"` with your own Authgear client application credentials.
+To do this, rename `.env.example` in the root directory of the project to `.env`, then open the file and add your Authgear client application's Client ID and Endpoint as the value for `VITE_AUTHGEAR_CLIENT_ID` and `VITE_AUTHGEAR_ENDPOINT` respectively.
 
 Add the following URIs to your Authgear client application's Authorized Redirect URI:
 

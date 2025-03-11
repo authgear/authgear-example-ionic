@@ -6,8 +6,8 @@ export default function OAuthRedirect() {
   const router = useIonRouter();
 
   const finishAuthentication = useCallback(async () => {
-    const CLIENT_ID = "<ClIENT_ID>";
-    const ENDPOINT = "<AUTHGEAR_ENDPOINT>";
+    const CLIENT_ID = import.meta.env.VITE_AUTHGEAR_CLIENT_ID;
+    const ENDPOINT = import.meta.env.VITE_AUTHGEAR_ENDPOINT;
 
     try {
       await authgearWeb.configure({

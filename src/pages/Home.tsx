@@ -20,13 +20,14 @@ import authgearCapacitor, {
 } from "@authgear/capacitor";
 import "./Home.css";
 
-const CLIENT_ID = "<ClIENT_ID>";
-const ENDPOINT = "<AUTHGEAR_ENDPOINT>";
-const REDIRECT_URI_WEB_AUTHENTICATE = "http://localhost:8100/oauth-redirect";
-const REDIRECT_URI_CAPACITOR = "com.authgear.example.capacitor://host/path";
+const CLIENT_ID = import.meta.env.VITE_AUTHGEAR_CLIENT_ID;
+const ENDPOINT = import.meta.env.VITE_AUTHGEAR_ENDPOINT;
+const REDIRECT_URI_WEB_AUTHENTICATE = import.meta.env.VITE_AUTHGEAR_REDIRECT_URI_WEB;
+const REDIRECT_URI_CAPACITOR = import.meta.env.VITE_AUTHGEAR_REDIRECT_URI_CAPACITOR;
 
 function isPlatformWeb(): boolean {
   return Capacitor.getPlatform() === "web";
+  
 }
 
 function AuthenticationScreen() {
