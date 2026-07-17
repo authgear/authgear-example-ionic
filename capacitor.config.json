@@ -1,0 +1,5 @@
+{
+  "appId": "com.authgear.example.capacitor",
+  "appName": "authgear-ionic-example",
+  "webDir": "dist"
+}

@@ -1,16 +1,16 @@
 PODS:
-  - AuthgearCapacitor (2.14.0):
+  - AuthgearCapacitor (5.1.0):
     - Capacitor
-  - Capacitor (7.0.1):
+  - Capacitor (7.6.8):
     - CapacitorCordova
-  - CapacitorApp (7.0.0):
+  - CapacitorApp (7.1.2):
     - Capacitor
-  - CapacitorCordova (7.0.1)
-  - CapacitorHaptics (7.0.0):
+  - CapacitorCordova (7.6.8)
+  - CapacitorHaptics (7.0.5):
     - Capacitor
-  - CapacitorKeyboard (7.0.0):
+  - CapacitorKeyboard (7.0.6):
     - Capacitor
-  - CapacitorStatusBar (7.0.0):
+  - CapacitorStatusBar (7.0.6):
     - Capacitor
 
 DEPENDENCIES:
@@ -39,14 +39,14 @@ EXTERNAL SOURCES:
     :path: "../../node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  AuthgearCapacitor: 7c9e243e8dd707ac48f99e9f0c6bcc029f516bf5
-  Capacitor: 23fff43571a4d1e3ee7d67b5a3588c6e757c2913
-  CapacitorApp: 45cb7cbef4aa380b9236fd6980033eb5cde6fcd2
-  CapacitorCordova: 63d476958d5022d76f197031e8b7ea3519988c64
-  CapacitorHaptics: 1fba3e460e7614349c6d5f868b1fccdc5c87b66d
-  CapacitorKeyboard: 2c26c6fccde35023c579fc37d4cae6326d5e6343
-  CapacitorStatusBar: 438e90beeeefa8276b24e6c5991cb02dd13e51bf
+  AuthgearCapacitor: de79e0dac77d6cb95d375fd5d42f58913840d934
+  Capacitor: ff6bf01336ac353098378828aff465095a89e459
+  CapacitorApp: f01a913211780e0718dae9750442c3e23f96e106
+  CapacitorCordova: e61ee8c40101b8cd011d0224261606a290c082cf
+  CapacitorHaptics: 1b145fa83c622e5383a3bac04ea81e2514f0b0f5
+  CapacitorKeyboard: a2e0869edd229490ce36aed2549c0d6b95e27ee8
+  CapacitorStatusBar: 416e9e53fd6397e668d4a181cd2131617d949bd6
 
 PODFILE CHECKSUM: e137e8fb308c627dbf70d5f399c491b0955063df
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2
